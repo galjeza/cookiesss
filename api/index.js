@@ -3,7 +3,7 @@ const app = express();
 
 app.post("/", (req, res) => {
   console.log("Cookies: ", req.body);
-  res.send("Cookies received");
+  res.send(req.body);
 });
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
