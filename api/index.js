@@ -6,8 +6,8 @@ const cors = require("cors");
 app.use(cors());
 
 app.post("/", (req, res) => {
-  console.log("Cookies: ", req);
-  res.send("OK");
+  console.log("Cookies: ", req.body);
+  res.send(req.body);
 });
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
